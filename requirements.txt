@@ -1,0 +1,9 @@
+Django==2.2.2
+psycopg2>=2.8.2,<3
+djangorestframework>=3.9.4,<4
+gunicorn[gevent]<20
+django-logging-json<2
+python-json-logger<1
+Markdown<4
+mongoengine<1
+django-rest-framework-mongoengine>3.3,<4

@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  api:
+    image: alekseystryukov/restapi:latest
+    environment:
+      - MD_HOST=mongodb.data.svc.cluster.local
+      - MD_USER=root
+      - MD_PASS=example
+      - DB_HOST=postgresql.data.svc.cluster.local
+      - DB_NAME=postgres-database
+      - DB_USER=postgres-user
+      - DB_PASSWORD=postgres-password
+      - C_FORCE_ROOT=1
+      - PYTHONUNBUFFERED=1
+    ports:
+      - "8000:8000"
+    labels:
+      kompose.service.expose: "restapi.k8s.prozorro.gov.ua"
